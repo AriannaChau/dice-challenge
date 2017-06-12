@@ -1,0 +1,80 @@
+body {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+body > div {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  padding: 5px;
+  & .pip {
+    display:inline-block;
+    z-index: 2;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: black;
+  }
+}
+
+div.first-face {
+  justify-content: center;
+  align-items: center;
+}
+
+div.second-face {
+  justify-content: space-between;
+  & .pip:nth-of-type(1) {
+    align-self: flex-start;
+  }
+  & .pip:nth-of-type(2) {
+    align-self: flex-end;
+  }
+}
+
+div.third-face {
+  justify-content: space-between;
+  & .pip:nth-of-type(1) {
+    align-self: flex-start;
+  }
+  & .pip:nth-of-type(2) {
+    align-self: center;
+  }
+  & .pip:nth-of-type(3) {
+    align-self: flex-end;
+  }
+}
+
+div.fourth-face {
+  justify-content: space-between;
+  & .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+div.fifth-face {
+  justify-content: space-between;
+  & .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:nth-of-type(2) {
+      justify-content: center;
+    }
+  }
+}
+
+div.sixth-face {
+  justify-content: space-between;
+  & .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
